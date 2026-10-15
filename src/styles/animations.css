@@ -1,0 +1,184 @@
+/* src/styles/animations.css
+   Import LAST in main.jsx (after responsive.css). */
+
+/* ---------- word reveal ---------- */
+.words {
+  display: inline;
+}
+.w {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: top;
+  padding: 0 0.02em 0.14em;
+  margin-bottom: -0.14em;
+}
+.wi {
+  display: inline-block;
+  will-change: transform;
+}
+/* hero h1: only the .acc line is gold (word spans must not all turn gold) */
+.hero h1 span {
+  color: inherit;
+}
+.hero h1 .acc,
+.hero h1 .acc span {
+  color: var(--accent);
+}
+
+/* ---------- image reveal ---------- */
+.img-reveal {
+  overflow: hidden;
+  will-change: clip-path;
+}
+.img-reveal-in {
+  width: 100%;
+  height: 100%;
+  will-change: transform;
+}
+
+/* ---------- buttons: lift + light sweep ---------- */
+.btn {
+  position: relative;
+  overflow: hidden;
+}
+.btn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    110deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.28) 50%,
+    transparent 70%
+  );
+  transform: translateX(-120%);
+  transition: transform 0.7s ease;
+  pointer-events: none;
+}
+.btn:hover::after {
+  transform: translateX(120%);
+}
+.btn:hover {
+  transform: translateY(-2px);
+}
+.btn:active {
+  transform: translateY(0);
+}
+
+/* ---------- text links: animated underline ---------- */
+.link {
+  text-decoration: none;
+  background: linear-gradient(currentColor, currentColor) 0 100% / 0 2px
+    no-repeat;
+  padding-bottom: 3px;
+  transition: background-size 0.35s ease;
+}
+.link:hover {
+  background-size: 100% 2px;
+}
+
+/* ---------- card spotlight (follows the cursor) ---------- */
+.pcard {
+  position: relative;
+}
+.sol-card::before,
+.pcard::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: radial-gradient(
+    360px circle at var(--mx, 50%) var(--my, 50%),
+    rgba(216, 155, 53, 0.14),
+    transparent 60%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+.sol-card:hover::before,
+.pcard:hover::before {
+  opacity: 1;
+}
+
+/* ---------- product grid wrappers (animated tab switch) ---------- */
+.pgrid > .pitem {
+  display: flex;
+}
+.pgrid > .pitem > .pcard {
+  flex: 1;
+}
+
+/* ---------- sliding tab pill ---------- */
+.tabs button {
+  position: relative;
+}
+.tabs.center button.on {
+  background: transparent;
+  color: #fff;
+}
+.tab-pill {
+  position: absolute;
+  inset: -1px;
+  background: var(--primary);
+  z-index: 0;
+}
+.tab-txt {
+  position: relative;
+  z-index: 1;
+}
+
+/* ---------- industries cards ---------- */
+.ind-img {
+  overflow: hidden;
+  border-bottom: 4px solid var(--accent);
+}
+.ind-img img {
+  transition: transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.ind:hover .ind-img img {
+  transform: scale(1.07);
+}
+
+/* ---------- hero scroll cue pulse on capability items ---------- */
+.cap-bar li i {
+  transition: transform 0.4s ease;
+}
+.cap-bar li:hover i {
+  transform: rotate(225deg) scale(1.3);
+}
+
+/* ---------- form focus ---------- */
+input,
+select,
+textarea {
+  transition:
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(216, 155, 53, 0.25);
+}
+
+/* ---------- workflow step hover ---------- */
+.flow li {
+  transition: background 0.3s ease;
+}
+.flow li:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+/* ---------- rows hover ---------- */
+.rows .row {
+  transition:
+    padding-left 0.3s ease,
+    background 0.3s ease;
+}
+.rows .row:hover {
+  padding-left: 14px;
+  background: rgba(8, 19, 31, 0.025);
+}

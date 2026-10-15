@@ -1,0 +1,21 @@
+export const services = [
+  { slug: 'process-maintenance', name: 'Process Plant Maintenance', image: '/assets/se1.png',
+    summary: 'Mechanical, electrical and instrumentation engineering support for running process plants.',
+    points: ['Mechanical / Electrical / Instrumentation engineering services & solutions', 'Site services: removal, overhauling and installation', 'Sourcing & supply of instrumentation, mechanical and electrical engineering materials', 'Annual maintenance services'] },
+  { slug: 'shutdown-maintenance', name: 'TAM / Shutdown Maintenance', image: '/assets/se2.png',
+    summary: 'Turnaround and shutdown jobs carried out under contract agreement.',
+    points: ['TAM / shutdown jobs under contract agreement', 'Routine repairs during outages / turnarounds', 'On-site valve repair and testing', 'Technicians arrive with on-site support vehicles; critical services on-site 24/7'] },
+  { slug: 'valve-remanufacturing', name: 'Valve Re-manufacturing', image: '/assets/se3.png',
+    summary: 'In-house valve re-manufacturing and complete control valve overhaul.',
+    points: ['In-service valve testing', 'Shop repair and testing', 'Control valve, actuator and instrumentation overhaul: disassembled, inspected, cleaned, soft goods replaced, re-assembled, painted and tested to ANSI and FCI standards', 'Diagnostics and calibration'] },
+  { slug: 'instrumentation', name: 'Instrumentation Services', image: '/assets/se4.png',
+    summary: 'Field instrumentation, control systems and calibration.',
+    points: ['Calibration of process parameters & valves', 'Installation and commissioning of field instruments', 'Erection and commissioning of PLC, DCS, SCADA etc.', 'Preparation of loop drawings and P&ID', 'Design and development of special test setups', 'Instrument loop checking, control panel wiring, tubing', 'Cable scheduling, tray work, tubing and termination'] },
+  { slug: 'mechanical-maintenance', name: 'Mechanical Engineering Maintenance', image: '/assets/se5.png',
+    summary: 'Machining, spare parts and site mechanical services.',
+    points: ['Machining & supply of spare parts', 'Site services: removal, overhauling & installation', 'Valve components manufactured to customer requirements', 'Full-service industrial engineering services'] },
+  { slug: 'rotary-equipment', name: 'Rotary Equipment Maintenance', image: '/assets/se6.png',
+    summary: 'Pumps, blowers and compressors inspected, dismantled and re-installed after overhauling.',
+    points: ['Pumps', 'Blowers', 'Compressors', 'Removal, overhauling and installation'] },
+];
+export const workflow = ['Inspect', 'Identify', 'Repair', 'Re-manufacture', 'Test', 'Return to service'];

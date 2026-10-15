@@ -1,0 +1,5 @@
+:root{
+  --primary:#0B1F33;--secondary:#123B5D;--accent:#D89B35;--light:#F4F6F8;--white:#fff;--dark:#08131F;--text:#1c2b3a;--muted:#5d6b7a;--line:#d9dfe5;
+  --font:'Manrope',system-ui,sans-serif;--head:'Space Grotesk','Manrope',system-ui,sans-serif;
+  --container:1200px;--pad:clamp(16px,4vw,32px);--sec:clamp(56px,9vw,112px);--radius:2px;--t:.25s ease;--navh:72px;
+}
