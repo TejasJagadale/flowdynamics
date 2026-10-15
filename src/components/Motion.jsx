@@ -147,7 +147,7 @@ export function ImageReveal({
   return (
     <motion.div
       className={`img-reveal ${className}`}
-      initial={{ clipPath: CLIPS[from] }}
+      // initial={{ clipPath: CLIPS[from] }}
       whileInView={{ clipPath: "inset(0 0 0 0)" }}
       viewport={{ once: true, margin: "-80px" }}
       transition={{ duration: 1.05, delay, ease: EASE }}

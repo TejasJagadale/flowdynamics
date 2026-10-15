@@ -21,6 +21,7 @@ export default function Footer() {
           <p className="ic"><MapPin size={16} aria-hidden="true" />{company.address}</p>
           <p className="ic"><Phone size={16} aria-hidden="true" />{company.phones[0]}</p>
           <p className="ic"><Mail size={16} aria-hidden="true" />{company.emails[0]}</p>
+          <p>GSTIN: {company.gstin}</p>
           <Link to="/clients">Clients</Link><Link to="/industries">Industries</Link>
         </div>
       </div>

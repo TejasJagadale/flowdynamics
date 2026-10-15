@@ -89,7 +89,7 @@
   z-index: 2;
   background: radial-gradient(
     360px circle at var(--mx, 50%) var(--my, 50%),
-    rgba(216, 155, 53, 0.14),
+    rgba(194, 44, 46, 0.1),
     transparent 60%
   );
   opacity: 0;
@@ -161,7 +161,7 @@ select:focus,
 textarea:focus {
   outline: none;
   border-color: var(--accent);
-  box-shadow: 0 0 0 3px rgba(216, 155, 53, 0.25);
+  box-shadow: 0 0 0 3px rgba(194, 44, 46, 0.2);
 }
 
 /* ---------- workflow step hover ---------- */

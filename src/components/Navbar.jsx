@@ -69,7 +69,8 @@ export default function Navbar() {
       <header className={`nav${scrolled ? ' scrolled' : ''}`}>
         <div className="container nav-in">
           <Link to="/" className="brand" aria-label="Flow Dynamics home">
-            <img src={images.logo} alt="" width="38" height="50" /><span>Flow <em>Dynamics</em></span>
+            <img src={images.logo} alt="" width="48" height="68" />
+            <span><b>FLOW</b> <em>DYNAMICS</em></span>
           </Link>
           <nav className="nav-links" aria-label="Primary">
             {nav.map((n) => n.menu ? (

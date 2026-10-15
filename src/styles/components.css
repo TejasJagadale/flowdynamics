@@ -15,21 +15,27 @@
 .brand {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   text-decoration: none;
-  font: 700 2.5rem var(--head);
+  font: 700 clamp(1.15rem, 2vw, 1.65rem) var(--head);
   color: var(--primary);
   flex-shrink: 0;
   text-transform: uppercase;
 }
 .brand img {
-  height: 50px;
-  width: auto;
+  height: 68px;
+  width: 48px;
   object-fit: contain;
+}
+.brand span {
+  white-space: nowrap;
+}
+.brand b {
+  font-weight: 700;
 }
 .brand em {
   font-style: normal;
-  color: #c42b2b;
+  color: var(--accent);
 }
 .nav-links {
   display: flex;
@@ -185,7 +191,7 @@
 }
 .ring {
   position: absolute;
-  border: 1px dashed rgba(216, 155, 53, 0.45);
+  border: 1px dashed rgba(194, 44, 46, 0.35);
   border-radius: 50%;
   animation: spin 40s linear infinite;
   pointer-events: none;
@@ -790,18 +796,25 @@ textarea {
   align-items: center;
   gap: 10px;
   text-decoration: none;
-  font: 700 1.15rem var(--head);
+  font: 700 clamp(1.15rem, 2vw, 1.65rem) var(--head);
   color: var(--primary);
   flex-shrink: 0;
+  text-transform: uppercase;
 }
 .brand img {
-  height: 46px;
-  width: auto;
+  height: 68px;
+  width: 48px;
   object-fit: contain;
+}
+.brand span {
+  white-space: nowrap;
+}
+.brand b {
+  font-weight: 700;
 }
 .brand em {
   font-style: normal;
-  color: #c42b2b;
+  color: var(--accent);
 }
 .nav-links {
   display: flex;
@@ -1056,7 +1069,7 @@ textarea {
 }
 .ring {
   position: absolute;
-  border: 1px dashed rgba(216, 155, 53, 0.45);
+  border: 1px dashed rgba(194, 44, 46, 0.35);
   border-radius: 50%;
   animation: spin 40s linear infinite;
   pointer-events: none;
@@ -1666,7 +1679,7 @@ textarea {
   background: var(--primary, #0d2438);
 }
 .fc-call:hover {
-  background: var(--accent, #d89b35);
+  background: var(--accent, #c22c2e);
   color: var(--dark, #08131f);
 }
 
